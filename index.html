@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cheap & Best India Food Guide</title>
+    <meta
+      name="description"
+      content="A city-wise cheap and best food guide for Indian restaurants, cafes, messes, hotels, street food, and dhaba-style favourites."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-shell hero">
+      <nav class="topbar" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="India Table Guide home">
+          <span class="brand-mark">IT</span>
+          <span>Cheap & Best India</span>
+        </a>
+        <div class="nav-actions">
+          <a href="#restaurants">Explore</a>
+          <a href="#sources">Sources</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Five cheap and best places per city</p>
+          <h1>Cheap & Best India</h1>
+          <p class="intro">
+            Pick an Indian city and get exactly five value-for-money places to eat:
+            restaurants, cafes, messes, hotels, street classics, and dhaba-style favourites.
+          </p>
+          <form class="search-panel" role="search" aria-label="Restaurant search">
+            <label for="searchInput">Search place, dish, cuisine, or vibe</label>
+            <div class="search-row">
+              <input id="searchInput" type="search" placeholder="Try under Rs 200, biryani, dosa, thali..." />
+              <button type="button" id="resetButton" aria-label="Reset filters">Reset</button>
+            </div>
+          </form>
+        </div>
+        <figure class="hero-media">
+          <img src="assets/india-food-collage.svg" alt="Illustrated Indian dining table with several dishes" />
+        </figure>
+      </section>
+    </header>
+
+    <main>
+      <section class="metrics-band" aria-label="Guide summary">
+        <div>
+          <strong id="cityCount">0</strong>
+          <span>Cities</span>
+        </div>
+        <div>
+          <strong id="restaurantCount">0</strong>
+          <span>Per city</span>
+        </div>
+        <div>
+          <strong id="cuisineCount">0</strong>
+          <span>Food vibes</span>
+        </div>
+        <div>
+          <strong>Rs</strong>
+          <span>Budget shown</span>
+        </div>
+      </section>
+
+      <section class="app-shell controls-section" aria-label="Filters">
+        <div class="section-heading">
+          <p class="eyebrow">Browse by intent</p>
+          <h2>Choose a city and budget food mood</h2>
+        </div>
+        <div class="filter-block">
+          <div class="filter-header">
+            <span>City</span>
+            <output id="activeCity">All cities</output>
+          </div>
+          <div class="chip-row" id="cityFilters" role="list" aria-label="City filters"></div>
+        </div>
+        <div class="filter-block">
+          <div class="filter-header">
+            <span>Vibe</span>
+            <output id="activeCuisine">All vibes</output>
+          </div>
+          <div class="chip-row" id="cuisineFilters" role="list" aria-label="Cuisine filters"></div>
+        </div>
+      </section>
+
+      <section class="app-shell featured-section" aria-label="Top reviewed highlights">
+        <div class="section-heading">
+          <p class="eyebrow">Quick shortlist</p>
+        <h2>Featured value toppers</h2>
+        </div>
+        <div class="feature-grid" id="featuredList"></div>
+      </section>
+
+      <section class="app-shell listing-section" id="restaurants">
+        <div class="listing-toolbar">
+          <div>
+            <p class="eyebrow">Cheap and best finder</p>
+            <h2 id="resultTitle">Five value picks</h2>
+            <p class="city-tagline" id="cityTagline"></p>
+          </div>
+          <label class="sort-control" for="sortSelect">
+            Sort
+            <select id="sortSelect">
+              <option value="rating">Best value signal</option>
+              <option value="city">Place type</option>
+              <option value="dish">Signature dish</option>
+            </select>
+          </label>
+        </div>
+        <div class="restaurant-grid" id="restaurantGrid"></div>
+        <p class="empty-state" id="emptyState" hidden>No restaurants match those filters yet.</p>
+      </section>
+
+      <section class="source-band" id="sources">
+        <div class="app-shell source-grid">
+          <div>
+            <p class="eyebrow">Data note</p>
+            <h2>Built as a starter catalogue, ready for scale</h2>
+          </div>
+          <div class="source-copy">
+            <p>
+              This version is designed as a cheap-and-best top-five-per-city guide, so every city
+              stays scannable and practical. Each place includes the best dish to try, an estimated
+              budget range, a short review note, and a source link.
+            </p>
+            <p>
+              To expand toward every Indian city, add new city objects to the catalogue with five
+              places each. The interface will pick them up automatically.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Cheap & Best India</span>
+      <span>Top five budget food guide</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
